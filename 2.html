@@ -28,6 +28,8 @@
 <p id="msg"></p>
 
 <script>
+let msg = document.getElementById('msg');
+
 function buttonClick(){
   localStorage.setItem('user', nameText.value); // 保存
   msg.innerText = 'お名前は' + nameText.value + 'さんですね';
@@ -43,7 +45,6 @@ else {
 
 let nameText = document.getElementById('nameText');
 nameText.value = '名前';
-let msg = document.getElementById('msg');
 
 let checkButton = document.getElementById('checkButton');
 checkButton.addEventListener('click', buttonClick);
