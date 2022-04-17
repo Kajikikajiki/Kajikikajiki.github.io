@@ -33,12 +33,16 @@ let nameText = document.getElementById('nameText');
 
 function buttonClick(){
   localStorage.setItem('user', nameText.value); // 保存
-  msg.innerText = 'お名前は' + nameText.value + 'さんですね';
+  showuser();
+}
+
+function showuser() {
+  msg.innerText = 'お名前は' + localStorage.getItem("user") + 'さんですね';
 }
 
 user = localStorage.getItem("user"); // 読み込み
 if (user!=null) {
-  buttonClick(); // すでに登録済み
+  showuser(); // すでに登録済み
 }
 else {
   msg.innerText = 'ｵﾒｪ誰だよ！';
