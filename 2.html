@@ -29,8 +29,7 @@
 
 <script>
 let msg = document.getElementById('msg');
-  
-  nameText.value = '名前';
+let nameText = document.getElementById('nameText');
 
 function buttonClick(){
   localStorage.setItem('user', nameText.value); // 保存
@@ -46,6 +45,7 @@ else {
 }
 
 let nameText = document.getElementById('nameText');
+nameText.value = '名前';
 
 let checkButton = document.getElementById('checkButton');
 checkButton.addEventListener('click', buttonClick);
